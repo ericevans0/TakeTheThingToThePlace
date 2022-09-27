@@ -1,2 +1,2 @@
 # TakeTheThingToThePlace
-A very basic fantasy genre game
+A very basic fantasy genre game.

@@ -1,7 +1,18 @@
+# This .gitignore file is mostly from an open source project.
+
+# MY CUSTOMIZATIONS ARE AT THE VERY END OF THE FILE, 
+# Look for the banner "MY CUSTOMIZATIONS".
+# Placing them at the end ensures they override the default rules.
+
+
+#---- BELOW THIS LINE BEGINS THE UNMODIFIED FILE DOWNLOADED FROM GITHUB ----
+
 # This .gitignore file should be placed at the root of your Unity project directory
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
-#
+
+
+
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
@@ -9,12 +20,6 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
-
-scraps.txt
-code-scraps*
-connectwebgl.zip
-webgl_sharing
-webgl\ builds
 
 
 # MemoryCaptures can get excessive in size.
@@ -136,4 +141,44 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+
+
+###########################################
+###          MY CUSTOMIZATIONS          ###          
+###########################################
+
+# Assets to import from the Asset Store through Package Manager
+# (In some cases, specific assets can be copied into the project-specific folders,
+#  to remove the build dependency, but in some cases, such as C# scripts, that causes
+#  conflicts. In other cases, it is just more convenient. Also, the full asset pack
+#  would generally be needed for continuing development anyway.)
+# So, to ensure a working dev environment, and possibly a smooth build, import these:
+
+# Meadow Environment - Dynamic Nature
+/[Aa]ssets/NatureManufacture*
+
+# Terrain Sample Asset Pack
+/[Aa]ssets/TerrainSampleAssets*
+# Note: This asset has package dependencies:
+#  com.unity.render-pipelines.high-definition
+#  com.unity.shadergraph
+# These are added to the manifest.json, so I'm
+# including those in the commit as I've done with
+# other such libraries. Fingers crossed!
+
+
+
+# Here are a few files I use in my personal dev process, meant to be temporary
+# and of no use to anyone else.
+scraps.txt
+code-scrap*
+
+
+
+# The following exclusions are my additions that don't seem to be properly
+# ignored by the unmodified file, but perhaps should be incorporated into it.
+connectwebgl.zip
+webgl_sharing
+webgl\ builds
+
 

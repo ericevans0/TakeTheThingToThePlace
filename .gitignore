@@ -157,6 +157,14 @@ crashlytics-build.properties
 # Meadow Environment - Dynamic Nature
 /[Aa]ssets/NatureManufacture*
 
+# Conifers [BOTD]
+/[Aa]ssets/Conifers*
+# Note: To make it work in URP, find Conifers [BOTD] URP.unitypackage and "run" to
+# import URP versions. Then run CTI_URP_12.0_runtime.unitypackage to get some more 
+# fixups. Some of these files end up under "CTI URP" folder.
+/[Aa]ssets/CTI*
+
+
 # Terrain Sample Asset Pack
 /[Aa]ssets/TerrainSampleAssets*
 # Note: This asset has package dependencies:

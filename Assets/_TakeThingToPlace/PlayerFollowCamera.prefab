@@ -76,9 +76,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damping: {x: 0.1, y: 0.25, z: 0.3}
-  ShoulderOffset: {x: 1, y: 0, z: 0}
+  ShoulderOffset: {x: 1, y: 0.2, z: 0}
   VerticalArmLength: 0
-  CameraSide: 0.6
+  CameraSide: 0.7
   CameraDistance: 4
   CameraCollisionFilter:
     serializedVersion: 2
@@ -118,7 +118,7 @@ Transform:
   m_Children:
   - {fileID: 1724446227354046076}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1724446227796066233
 MonoBehaviour:

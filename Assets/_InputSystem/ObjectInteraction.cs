@@ -9,10 +9,12 @@ public class ObjectInteraction : MonoBehaviour
 {
     [SerializeField] private Transform playerCameraTransform;
     [SerializeField] private LayerMask grabbableLayerMask;
+    private ObjectGrabbable currentlyInHand;
     [SerializeField] private Transform grabbedObjectHoldPoint;
     [SerializeField] private float reachDistance = 4f; // How far can the character reach to interact with something.
     // Camera follow distance (default 4f) should be added to reachDistance to see if it is in reach.
     private float camFollowDistance = 4f; // TODO Should be obtained from the camera, probably.
+
 
     private PlayerInput playerInput;
     void Start()
@@ -47,9 +49,27 @@ public class ObjectInteraction : MonoBehaviour
     public void OnGrabRelease()
     {
         Debug.Log("ObjectInteraction.OnGrabRelease");
-        ObjectGrabbable grabbable = FindGrabbableInReach();
-        Debug.Log($"grabbable = {grabbable}");
-        if (grabbable != null) grabbable.Grab(grabbedObjectHoldPoint);
+
+        ObjectGrabbable grabbableInReach = FindGrabbableInReach();
+        Debug.Log($"grabbableInReach = {grabbableInReach}. currentlyInHand = {currentlyInHand}");
+
+        ObjectGrabbable objectToDrop = currentlyInHand;
+
+        ObjectGrabbable objectToGrab = (currentlyInHand != grabbableInReach) ? grabbableInReach : null;
+
+        if (objectToDrop != null)
+        {
+            Debug.Log($"Dropping {objectToDrop}");
+            objectToDrop.Drop();
+            currentlyInHand = null;
+        }
+
+        if (objectToGrab != null)
+        {
+            Debug.Log($"picking up grabbable = {objectToGrab}");
+            objectToGrab.Grab(grabbedObjectHoldPoint);
+            currentlyInHand = objectToGrab;
+        }
     }
 
     public ObjectGrabbable FindGrabbableInReach()

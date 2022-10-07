@@ -176,7 +176,10 @@ crashlytics-build.properties
 
 
 # EternalTemple
-/[Aa]ssets/EternalTemple*
+/[Aa]ssets/Eternal*
+# find the 'Eternal Temple URP 2019.4.23f1.unitypackage' file within the folder.
+# Double-click to install the actual package content. This shows up in Assets as
+# Eternal Temple. Notice the space! That's why I'm ignoring 'Eternal*'.
 
 
 

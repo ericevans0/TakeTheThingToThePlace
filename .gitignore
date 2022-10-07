@@ -175,6 +175,10 @@ crashlytics-build.properties
 # other such libraries. Fingers crossed!
 
 
+# EternalTemple
+/[Aa]ssets/EternalTemple*
+
+
 
 # Here are a few files I use in my personal dev process, meant to be temporary
 # and of no use to anyone else.

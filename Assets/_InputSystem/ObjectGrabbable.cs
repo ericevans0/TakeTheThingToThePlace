@@ -30,5 +30,21 @@ public class ObjectGrabbable : MonoBehaviour {
         }
     }
 
+    private void SwingIntoPlace(Transform objectGrabPointTransform)
+    {
+        // lerp this into position
+    }
+
+    private void Attach(Transform objectGrabPointTransform)
+    {
+        // make a joint attaching to the grab point or to the player somehow
+        // stop lerping the position
+        // turn gravity back on
+    }
+
+    private void Detach()
+    {
+        // remove the joint
+    }
 
 }

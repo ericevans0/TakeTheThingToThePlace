@@ -15,16 +15,18 @@ public class ObjectGrabbable : MonoBehaviour {
     public void Grab(Transform objectGrabPointTransform) {
         this.objectGrabPointTransform = objectGrabPointTransform;
         objectRigidbody.useGravity = false;
-        this.GetComponent<MeshRenderer>().enabled = false;
-        nonphysicsDouble.SetParent(objectGrabPointTransform, false);
-        nonphysicsDouble.localPosition = new Vector3(0f, 0f, -0.2f);
-        nonphysicsDouble.localEulerAngles = new Vector3(0f, 0f, 0f);
+//        this.GetComponent<MeshRenderer>().enabled = false;
+//        nonphysicsDouble.SetActive(false);
+//        nonphysicsDouble.SetParent(objectGrabPointTransform, false);
+//        nonphysicsDouble.localPosition = new Vector3(0f, 0f, -0.2f);
+//        nonphysicsDouble.localEulerAngles = new Vector3(0f, 0f, 0f);
     }
 
     public void Drop() {
         this.objectGrabPointTransform = null;
-        this.GetComponent<MeshRenderer>().enabled = true;
-        this.transform.position = nonphysicsDouble.position;
+//        this.GetComponent<MeshRenderer>().enabled = true;
+//        this.transform.position = nonphysicsDouble.position;
+//        nonphysicsDouble.SetActive(false);
         objectRigidbody.useGravity = true;
         nonphysicsDouble.gameObject.SetActive(false);
 
